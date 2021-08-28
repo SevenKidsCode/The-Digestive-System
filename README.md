@@ -27,6 +27,6 @@ This project is important in facilitating the approach taken to teach in our loc
 
 :point_down: :point_down: :point_down:
 
-[Click Here!](https://lesprogrammeurbmical.netlify.app/)
+[Click Here!](https://coderprodigestive.netlify.app/)
 
 Made with :heart: by @LesCodersPro during the sevenKids code program August 2021
