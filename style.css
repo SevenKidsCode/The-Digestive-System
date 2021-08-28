@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Staatliches', cursive;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #d7e7ee;
+    width: 100vw;
+    height: 100vh;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(4, 196, 4, 0.6);
+    box-shadow: 0 0 5px rgba(14, 1, 1, 0.6);
+    width: 100%;
+    height: 10%;
+}
+
+.header1{
+    width: 90%;
+    text-align: center;
+}
+
+.header2{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(12, 75, 12, 0.6);
+    box-shadow: 0 0 5px rgba(7, 1, 1, 0.5);
+    cursor: pointer;
+}
+
+.title{
+    font-size: 35px;
+    color: white;
+    letter-spacing: 2px;
+    text-shadow:  5px 5px 3px #00000030;
+}
+
+.quizz{
+     font-size: 35px;
+     color: rgba(227, 19, 19, 0.844);
+     margin: auto;
+     letter-spacing: 2px; 
+     transition: 0.3s;
+     text-shadow:  5px 5px 2px #00000030;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(253, 166, 5);
+    transition: 0.2s;
+}
+
+a:hover{
+    color: rgb(243, 207, 141);
+    transition: 0.2s;
+}
+
+.container{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.container-img{
+    width: 60%;
+    height: 100%;
+    padding: 2%;
+}
+
+.container-description{
+    width: 39%;
+    height: 90%;
+    padding: 2%;
+    background-color:rgba(91, 223, 168, 0.362);
+    box-shadow: 0 0 5px rgba(200,200,200,0.8);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+
+
+
+
+
+.image{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-color:rgba(155, 205, 214, 0.362);
+    box-shadow: 0 0 5px rgba(200,200,200,0.8);
+    background-image: url('./assets/images/diagram.svg');
+    background-repeat: no-repeat;
+    background-position: center center ;
+    background-size: 100% 100%;  
+    position: relative;
+}
+
+#img_organes{
+    width: 100%;
+    height: 40%;
+    background-size: contain;
+    background-image: url('./assets/images/appdiges.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 10%;
+}
+
+#img_organep{
+    width: 100%;
+    height: 40%;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 30%;
+}
+
+.circle1 button{
+    width: 25px;
+    color: #fff;
+    height: 25px;
+    background-color: rgb(146, 216, 143);
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+    border-radius: 50%;
+    
+}
+
+
+
+.circle1{
+    animation-name: moveCirle1;
+    animation-direction: alternate;
+    animation-duration: .6s;
+    animation-iteration-count: infinite; 
+    /* animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0); */
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: rgba(146, 204, 146, 0.726);
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle2{
+    animation-name: moveCirle2;
+    /* animation-delay: .5s; */
+    animation-direction: alternate;
+    animation-duration: .6s;
+    animation-iteration-count: infinite; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height:35px;
+    border: none;
+    background-color: rgba(217, 235, 226, 0.63);
+    border-radius: 50%;
+    
+}
+
+.bouche{
+    position: absolute;
+    left: 47%;
+    top:16.5%;
+}
+
+
+
+.estomac{
+    position: absolute;
+    left: 54%;
+    top:58%;
+}
+
+.oesophage{
+    position: absolute;
+    left: 49%;
+    top: 33%;
+}
+
+.foie{
+    position: absolute;
+    left: 44%;
+    top: 54.5%;
+}
+
+.intestingrele{
+    position: absolute;
+    left: 52%;
+    top: 77%;
+}
+
+.grosintestin{
+    position: absolute;
+    left: 41%;
+    top: 79%;
+}
+
+.circle1 , .circle2 ,button{
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.circle1:hover {
+    background-color: rgba(175, 219, 245, 0.363);
+}
+
+.circle1:hover .circle2 , .circle2:hover{
+    background-color: #97d6f3a1;
+}
+
+.circle1:hover button , button:hover{
+    background-color: rgba(77, 187, 238, 0.671);
+
+}
+
+#transform{
+    transition-duration: 1s;
+    clip-path: circle(100%);
+
+}
+
+.circle{
+    clip-path: circle(0%)!important;
+}
+
+
+
+@keyframes moveCirle1 {
+    from {
+        clip-path: circle(100%);
+    }
+  
+    to {
+        clip-path: circle(40%);
+    }
+  }
+
+  @keyframes moveCirle2 {
+    from {
+        clip-path: circle(100%);
+    }
+  
+    to {
+        clip-path: circle(30%);
+    }
+  }
+
+  .h1.2{
+      margin-bottom: 39px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: underline;
+      letter-spacing: 2px;   
+  }
+
+  .origin{
+      text-align: center;
+      font-size: 19px;
+      font-family: 'Dosis', sans-serif;
+      letter-spacing: 0.5px;
+  }
+
+  
+  
+  
